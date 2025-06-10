@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ورود / ثبت‌نام - ماهان وی‌پی‌ان</title>
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      background-color: #e7f0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #003366;
+    }
+    .container {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid #007BFF;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #0056b3;
+      outline: none;
+    }
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .switch-form {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #007BFF;
+      cursor: pointer;
+    }
+    .error-msg {
+      color: #d9534f;
+      font-size: 0.85rem;
+      margin-top: 5px;
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="form-container">
+    <h2 id="form-title">ورود به حساب کاربری</h2>
+
+    <form id="login-form">
+      <label for="login-email">ایمیل</label>
+      <input type="email" id="login-email" required placeholder="ایمیل خود را وارد کنید" />
+      
+      <label for="login-password">رمز عبور</label>
+      <input type="password" id="login-password" required placeholder="رمز عبور را وارد کنید" />
+
+      <button type="submit">ورود</button>
+    </form>
+
+    <form id="register-form" style="display:none;">
+      <label for="register-name">نام کامل</label>
+      <input type="text" id="register-name" required placeholder="نام کامل خود را وارد کنید" />
+      
+      <label for="register-email">ایمیل</label>
+      <input type="email" id="register-email" required placeholder="ایمیل خود را وارد کنید" />
+      
+      <label for="register-password">رمز عبور</label>
+      <input type="password" id="register-password" required placeholder="رمز عبور را وارد کنید" />
+      
+      <label for="register-password-confirm">تکرار رمز عبور</label>
+      <input type="password" id="register-password-confirm" required placeholder="رمز عبور را دوباره وارد کنید" />
+
+      <button type="submit">ثبت‌نام</button>
+    </form>
+
+    <div class="switch-form" id="switch-to-register">حساب ندارید؟ ثبت‌نام کنید</div>
+    <div class="switch-form" id="switch-to-login" style="display:none;">قبلا ثبت‌نام کرده‌اید؟ وارد شوید</div>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    const switchToRegister = document.getElementById('switch-to-register');
+    const switchToLogin = document.getElementById('switch-to-login');
+    const formTitle = document.getElementById('form-title');
+
+    switchToRegister.addEventListener('click', () => {
+      loginForm.style.display = 'none';
+      registerForm.style.display = 'block';
+      switchToRegister.style.display = 'none';
+      switchToLogin.style.display = 'block';
+      formTitle.textContent = 'ثبت‌نام در ماهان وی‌پی‌ان';
+    });
+
+    switchToLogin.addEventListener('click', () => {
+      loginForm.style.display = 'block';
+      registerForm.style.display = 'none';
+      switchToRegister.style.display = 'block';
+      switchToLogin.style.display = 'none';
+      formTitle.textContent = 'ورود به حساب کاربری';
+    });
+
+    // نمونه اعتبارسنجی ساده فرم ثبت‌نام (رمزها یکی باشند)
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const pass = document.getElementById('register-password').value;
+      const passConfirm = document.getElementById('register-password-confirm').value;
+      if (pass !== passConfirm) {
+        alert('رمز عبور و تکرار آن مطابقت ندارند.');
+        return;
+      }
+      alert('ثبت‌نام شما با موفقیت انجام شد! (شبیه‌سازی)');
+      registerForm.reset();
+      switchToLogin.click();
+    });
+
+    // نمونه اعتبارسنجی ساده فرم ورود
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('ورود شما با موفقیت انجام شد! (شبیه‌سازی)');
+      loginForm.reset();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پلن‌های VPN | ماهان وی‌پی‌ان</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .plans {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .plans h2 {
+      color: #007BFF;
+      margin-bottom: 30px;
+    }
+
+    .plan-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .plan {
+      background: white;
+      border: 2px solid #007BFF;
+      border-radius: 16px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+      transition: 0.3s;
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+    }
+
+    .plan h3 {
+      margin-bottom: 10px;
+      color: #0056b3;
+    }
+
+    .plan p {
+      margin: 6px 0;
+      color: #333;
+    }
+
+    .plan .price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007BFF;
+      margin: 10px 0;
+    }
+
+    .plan .btn {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* جدول مقایسه */
+    .comparison {
+      margin-top: 50px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      direction: rtl;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .plan-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="plans">
+    <h2>انتخاب پلن مناسب شما</h2>
+    <div class="plan-cards">
+      <div class="plan">
+        <h3>پلن پایه</h3>
+        <p>مناسب برای استفاده روزمره</p>
+        <p class="price">89,000 تومان</p>
+        <p>سرعت: متوسط</p>
+        <p>پشتیبانی: تیکت</p>
+        <a href="#" class="btn">خرید</a>
+      </div>
+      <div class="plan">
+        <h3>پلن حرفه‌ای</h3>
+        <p>پایداری بالا و سرعت بهتر</p>
+        <p class="price">139,000 تومان</p>
+        <p>سرعت: بالا</p>
+        <p>پشتیبانی: فوری</p>
+        <a href="#" class="btn">خرید</a>
+      </div>
+      <div class="plan">
+        <h3>پلن نامحدود</h3>
+        <p>ویژه کاربران پرمصرف</p>
+        <p class="price">189,000 تومان</p>
+        <p>سرعت: خیلی بالا</p>
+        <p>پشتیبانی: 24/7</p>
+        <a href="#" class="btn">خرید</a>
+      </div>
+    </div>
+
+    <div class="comparison">
+      <h3 style="margin-top: 40px;">جدول مقایسه پلن‌ها</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ویژگی</th>
+            <th>پایه</th>
+            <th>حرفه‌ای</th>
+            <th>نامحدود</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>سرعت</td>
+            <td>متوسط</td>
+            <td>بالا</td>
+            <td>خیلی بالا</td>
+          </tr>
+          <tr>
+            <td>تعداد دستگاه</td>
+            <td>1</td>
+            <td>3</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>پشتیبانی</td>
+            <td>تیکت</td>
+            <td>فوری</td>
+            <td>24/7</td>
+          </tr>
+          <tr>
+            <td>ترافیک</td>
+            <td>50GB</td>
+            <td>100GB</td>
+            <td>نامحدود</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سوالات پرتکرار - ماهان وی‌پی‌ان</title>
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      background: #f0f8ff;
+      color: #003366;
+      margin: 20px;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .faq-item {
+      background: white;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 20px;
+    }
+    .question {
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+      padding-right: 25px;
+    }
+    .question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      font-size: 20px;
+      color: #007BFF;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.active .question::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+    .answer {
+      display: none;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+    .faq-item.active .answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>سوالات پرتکرار</h1>
+
+  <div class="faq-item">
+    <div class="question">VPN چیست و چگونه کار می‌کند؟</div>
+    <div class="answer">
+      VPN یک شبکه خصوصی مجازی است که ارتباط شما را امن و ناشناس می‌کند.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">آیا استفاده از VPN قانونی است؟</div>
+    <div class="answer">
+      بله، در بیشتر کشورها استفاده از VPN قانونی است اما بهتر است قوانین محلی را بررسی کنید.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">چگونه می‌توانم پلن خود را تمدید کنم؟</div>
+    <div class="answer">
+      پس از ورود به داشبورد، گزینه تمدید اشتراک را انتخاب و پرداخت را انجام دهید.
+    </div>
+  </div>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

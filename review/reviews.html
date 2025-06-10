@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظرات کاربران | ماهان وی‌پی‌ان</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    .reviews {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    }
+
+    .reviews h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 30px;
+    }
+
+    .review {
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .review:last-child {
+      border-bottom: none;
+    }
+
+    .review h4 {
+      margin: 0;
+      color: #007BFF;
+    }
+
+    .review .stars {
+      color: gold;
+      margin: 5px 0;
+    }
+
+    .review p {
+      color: #333;
+    }
+
+    .form input,
+    .form textarea,
+    .form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    .form button {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .reviews {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="reviews">
+    <h2>نظرات کاربران</h2>
+
+    <!-- نظرات نمونه -->
+    <div class="review">
+      <h4>سارا رضایی</h4>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>خیلی راضی بودم، سرعت عالی بود و پشتیبانی سریع جواب داد. حتماً تمدید می‌کنم!</p>
+    </div>
+    <div class="review">
+      <h4>میلاد احمدی</h4>
+      <div class="stars">⭐⭐⭐⭐</div>
+      <p>روی گوشی آیفون خیلی خوب جواب می‌داد، فقط ای‌کاش راهنمای اتصال بیشتری داشت.</p>
+    </div>
+
+    <!-- فرم ارسال نظر جدید -->
+    <div class="form">
+      <input type="text" placeholder="نام شما">
+      <select>
+        <option>امتیاز شما به خدمات ما</option>
+        <option>⭐</option>
+        <option>⭐⭐</option>
+        <option>⭐⭐⭐</option>
+        <option>⭐⭐⭐⭐</option>
+        <option>⭐⭐⭐⭐⭐</option>
+      </select>
+      <textarea placeholder="نظر شما..."></textarea>
+      <button>ارسال نظر</button>
+    </div>
+  </div>
+</body>
+</html>

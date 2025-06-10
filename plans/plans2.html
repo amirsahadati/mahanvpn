@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پلن‌های VPN - ماهان وی‌پی‌ان</title>
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      background-color: #e7f0ff;
+      margin: 0;
+      color: #003366;
+    }
+    header {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    main {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      font-size: 1rem;
+    }
+    th {
+      background-color: #007BFF;
+      color: white;
+      font-weight: 700;
+    }
+    tr:hover {
+      background-color: #f1faff;
+    }
+    .btn-select {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .btn-select:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead tr {
+        display: none;
+      }
+      tr {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        background: white;
+        padding: 15px;
+      }
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        font-size: 0.95rem;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+      td::before {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: 700;
+        color: #007BFF;
+        content: attr(data-label);
+        text-align: left;
+      }
+      .btn-select {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>پلن‌های VPN ماهان وی‌پی‌ان</header>
+
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th>ویژگی‌ها</th>
+        <th>پلن اقتصادی</th>
+        <th>پلن طلایی</th>
+        <th>پلن حرفه‌ای</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="ویژگی‌ها">قیمت ماهانه</td>
+        <td data-label="پلن اقتصادی">۹۹,۰۰۰ تومان</td>
+        <td data-label="پلن طلایی">۱۹۹,۰۰۰ تومان</td>
+        <td data-label="پلن حرفه‌ای">۳۹۹,۰۰۰ تومان</td>
+      </tr>
+      <tr>
+        <td data-label="ویژگی‌ها">سرعت</td>
+        <td data-label="پلن اقتصادی">۱۰ Mbps</td>
+        <td data-label="پلن طلایی">۵۰ Mbps</td>
+        <td data-label="پلن حرفه‌ای">نامحدود</td>
+      </tr>
+      <tr>
+        <td data-label="ویژگی‌ها">تعداد دستگاه‌ها</td>
+        <td data-label="پلن اقتصادی">۱ دستگاه</td>
+        <td data-label="پلن طلایی">۳ دستگاه</td>
+        <td data-label="پلن حرفه‌ای">۵ دستگاه</td>
+      </tr>
+      <tr>
+        <td data-label="ویژگی‌ها">پشتیبانی ۲۴/۷</td>
+        <td data-label="پلن اقتصادی">ندارد</td>
+        <td data-label="پلن طلایی">دارد</td>
+        <td data-label="پلن حرفه‌ای">دارد</td>
+      </tr>
+      <tr>
+        <td data-label="ویژگی‌ها">رمزنگاری</td>
+        <td data-label="پلن اقتصادی">AES-128</td>
+        <td data-label="پلن طلایی">AES-256</td>
+        <td data-label="پلن حرفه‌ای">AES-256</td>
+      </tr>
+      <tr>
+        <td data-label="ویژگی‌ها">امکان انتخاب سرور</td>
+        <td data-label="پلن اقتصادی">۳ کشور</td>
+        <td data-label="پلن طلایی">۱۰ کشور</td>
+        <td data-label="پلن حرفه‌ای">نامحدود</td>
+      </tr>
+      <tr>
+        <td data-label="ویژگی‌ها"></td>
+        <td data-label="پلن اقتصادی"><button class="btn-select">انتخاب پلن</button></td>
+        <td data-label="پلن طلایی"><button class="btn-select">انتخاب پلن</button></td>
+        <td data-label="پلن حرفه‌ای"><button class="btn-select">انتخاب پلن</button></td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+
+</body>
+</html>

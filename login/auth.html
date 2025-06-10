@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود / ثبت‌نام | ماهان وی‌پی‌ان</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .auth-container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+    }
+
+    .auth-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007BFF;
+    }
+
+    .auth-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .auth-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .auth-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .switch-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .switch-link a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .auth-container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>ورود به حساب</h2>
+    <form>
+      <input type="email" placeholder="ایمیل شما" required>
+      <input type="password" placeholder="رمز عبور" required>
+      <button type="submit">ورود</button>
+    </form>
+    <div class="switch-link">
+      حساب نداری؟ <a href="#" onclick="toggleForm()">ثبت‌نام کن</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm() {
+      const container = document.querySelector('.auth-container');
+      container.innerHTML = `
+        <h2>ثبت‌نام</h2>
+        <form>
+          <input type="text" placeholder="نام کامل" required>
+          <input type="email" placeholder="ایمیل" required>
+          <input type="password" placeholder="رمز عبور" required>
+          <button type="submit">ثبت‌نام</button>
+        </form>
+        <div class="switch-link">
+          حساب داری؟ <a href="#" onclick="location.reload()">وارد شو</a>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>

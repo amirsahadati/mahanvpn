@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پرداخت | ماهان وی‌پی‌ان</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    .payment {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    }
+
+    .payment h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 30px;
+    }
+
+    .bank-info {
+      background-color: #e7f1ff;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    .bank-info p {
+      margin: 5px 0;
+    }
+
+    .form input, .form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    .form textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .form button {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .form button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .payment {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="payment">
+    <h2>پرداخت کارت به کارت</h2>
+
+    <div class="bank-info">
+      <p><strong>دارنده کارت:</strong> ماهان بیزنسی</p>
+      <p><strong>شماره کارت:</strong> 6104-0000-0000-0000</p>
+    </div>
+
+    <div class="form">
+      <input type="text" placeholder="نام و نام خانوادگی شما">
+      <input type="text" placeholder="چه پلنی خریدید (مثلاً حرفه‌ای)">
+      <input type="text" placeholder="چه بانکی پرداخت کردید؟">
+      <textarea placeholder="چه ساعتی پرداخت کردید یا توضیح بیشتر بنویسید..."></textarea>
+      <button>ارسال اطلاعات پرداخت</button>
+    </div>
+  </div>
+</body>
+</html>

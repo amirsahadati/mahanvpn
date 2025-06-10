@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تماس با ما | ماهان وی‌پی‌ان</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    .contact {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    }
+
+    .contact h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 30px;
+    }
+
+    .contact p {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form input,
+    .form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    .form textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .form button {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .form button:hover {
+      background-color: #0056b3;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    @media (max-width: 600px) {
+      .contact {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact">
+    <h2>تماس با ما</h2>
+    <p>در صورت داشتن هرگونه سؤال، نظر یا مشکل با ما در تماس باشید. ما همیشه پاسخگو هستیم. 💬</p>
+
+    <form action="submit_contact.php" method="POST">
+        <input name="name" type="text" placeholder="نام شما" required>
+        <input name="email" type="email" placeholder="ایمیل شما" required>
+        <textarea name="message" placeholder="پیام شما..." required></textarea>
+        <button type="submit">ارسال پیام</button>
+    </form>
+
+
+    <div class="social">
+      <p>یا از طریق شبکه‌های اجتماعی با ما در ارتباط باشید:</p>
+      <a href="https://t.me/mahanvpn" target="_blank">تلگرام</a>
+      <a href="https://wa.me/989123456789" target="_blank">واتساپ</a>
+      <a href="mailto:support@mahanvpn.ir">ایمیل</a>
+    </div>
+  </div>
+</body>
+</html>
